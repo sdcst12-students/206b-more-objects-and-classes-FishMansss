@@ -4,6 +4,8 @@ class quadratic:
     a = 0
     b = 0
     c = 0
+    x = 0
+    y = 0
     roots = []
 
     def discriminant(self):
@@ -45,7 +47,10 @@ class quadratic:
         
         try:
             x = (-b+(b**2-4*a*c)**0.5)/2*a
-            if x == float(x):
+            y = (-b-(b**2-4*a*c)**0.5)/2*a
+            if x == float(x) and y == float(y):
+                self.x = x
+                self.y = y
                 check = True
         except:
             check = False
@@ -64,13 +69,13 @@ class quadratic:
         # list self.roots
         # list should be sorted in ascending order
         # roots should be rounded to 2 decimal places
-        
+        pass
         if self.hasRealRoots() == True:
-            a = self.a
-            b = self.b
-            c = self.c
-            x = (-b+(b**2-4*a*c)**0.5)/2*a
-            y = (-b-(b**2-4*a*c)**0.5)/2*a
+            
+            x = self.x
+            y = self.y  
+            return x, y
+        
         if self.hasRealRoots() == False:
             pass
         return
