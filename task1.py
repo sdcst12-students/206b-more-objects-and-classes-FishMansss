@@ -100,7 +100,11 @@ class quadratic:
     def __init__(self):
         # this should require 3 positional arguments and assign the values
         # to self.a, self.b and self.c
-        a = self.a
+        a = self.a  
+        b = self.b 
+        c = self.c 
+        x = self.x   
+        y = self.y 
         pass
 
 
