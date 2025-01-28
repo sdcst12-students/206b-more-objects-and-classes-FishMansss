@@ -14,6 +14,7 @@ class argExample:
             tw = input("Enter a value for width :")
             self.w = float(tw)
         except Exception as e:
+            print(e)
             print("Those numbers are invalid. Try again.\n")
     
     def multipleArea(self,multiple):
