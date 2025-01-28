@@ -97,7 +97,7 @@ class quadratic:
         pass
         return
         
-    def __init__(self):
+    def __init__(self, a, b, c):
         # this should require 3 positional arguments and assign the values
         # to self.a, self.b and self.c
         a = self.a  
