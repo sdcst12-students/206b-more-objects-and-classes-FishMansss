@@ -1,6 +1,6 @@
 #!python3
 import math
-class quadratic:
+class quadratics:
     a = 0
     b = 0
     c = 0
@@ -51,6 +51,7 @@ class quadratic:
             if x == float(x) and y == float(y):
                 self.x = x
                 self.y = y
+                self.roots.append(x,y)
                 check = True
         except:
             check = False
@@ -70,13 +71,13 @@ class quadratic:
         # list should be sorted in ascending order
         # roots should be rounded to 2 decimal places
         pass
-        if self.hasRealRoots() == True:
+        if self.hasRealRoots(self) == True:
             
             x = self.x
             y = self.y  
             return x, y
         
-        if self.hasRealRoots() == False:
+        if self.hasRealRoots(self) == False:
             pass
         return
     
@@ -97,15 +98,22 @@ class quadratic:
         pass
         return
         
-    def __init__(self, a, b, c):
+    def __init__(self):
         # this should require 3 positional arguments and assign the values
         # to self.a, self.b and self.c
-        a = self.a  
-        b = self.b 
-        c = self.c 
-        x = self.x   
-        y = self.y 
+         
+        self.isFactorable()
+        self.hasRealRoots()
+        self.discriminant()
+        self.calcRoots()
+    
         pass
+
+assert q1.isFactorable() == True
+assert q1.hasRealRoots() == True
+assert q1.discriminant() == 0
+assert q1.roots == [-2,-2]
+
 
 
 '''
