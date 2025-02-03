@@ -8,6 +8,10 @@ class quadratics:
     y = 0
     roots = []
 
+
+
+
+
     def discriminant(self):
         # requires no positional arguments
         # will make use of class properties a,b and c 
